@@ -1,0 +1,521 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 50;
+    padding: 50;
+    text-align: center;
+    background: url("../assets/img/tempotempo.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.hero {
+    background-image: url("../assets/img/mente.jpg"); /* Caminho da imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* Ocupa toda a largura da viewport */
+    height: 70vh; /* Ocupa toda a altura da viewport */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove qualquer espaçamento extra */
+    color: white; /* Para contrastar com o fundo */
+    display: flex;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    border-top: 0px;
+    border-radius: 0 0 20px 20px; /* Arredonda apenas a parte inferior */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.986); /* Sombra suave */
+}
+
+header {
+    background-color: #1d001d; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 20px 30px; /* Aumentando o padding para dar mais espaço */
+    border-radius: 10px 10px 0 0; /* Arredonda apenas a parte superior */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.986); /* Sombra suave */
+    text-align: center; /* Centralizando o texto */
+}
+
+header h1 {
+    font-family: 'Arial', sans-serif; /* Fonte estilosa */
+    font-size: 36px; /* Tamanho grande do texto */
+    font-weight: bold; /* Negrito para dar destaque */
+    text-transform: uppercase; /* Transformando em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+    margin: 0; /* Removendo margem para um layout mais limpo */
+    animation: slideIn 1s ease-out; /* Animação de entrada */
+}
+
+/* Animação para o texto */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.text-large {
+    font-size: 20px; /* Aumente o valor se precisar de um texto maior */
+}
+
+section {
+    padding: 10px 10px; /* Adiciona espaçamento interno */
+    margin-bottom: 10px; /* Adiciona espaçamento entre seções */
+    color: rgb(255, 255, 255); /* Deixa o texto branco para contraste */
+    text-align: center;
+    position: relative; /* Para que os conteúdos fiquem sobre o fundo */
+}
+
+/* Aplica imagem de fundo específica para cada seção */
+#apresentacao {
+    background: url("assets/img/bg-apresentacao.jpg") no-repeat center center/cover;
+}
+
+/* Adiciona um efeito de overlay para melhorar a leitura do texto */
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Deixa o fundo mais claro */
+}
+
+/* Faz com que o conteúdo das seções fique acima do overlay */
+section * {
+    position: relative;
+    z-index: 5;
+}
+
+#apresentacao img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.986);
+    display: block;
+    margin: 10px auto;
+    box-shadow: 0 6px 8px rgba(87, 86, 86, 0.986); /* Sombra suave */
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    #apresentacao img {
+        width: 150px;  /* Ajusta a largura da imagem em telas menores */
+        height: 150px; /* Ajusta a altura da imagem em telas menores */
+    }
+}
+
+
+footer {
+    background-color: #340c3b;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center; /* Garante que os itens fiquem centralizados na linha */
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas se necessário */
+}
+
+footer p {
+    text-align: center;
+    margin: 5px 10px;
+}
+
+.contact-icon {
+    transition: none; /* Remove a animação ou transição */
+    width: 40px; /* Define o tamanho fixo da imagem */
+    height: 40px; /* Define o tamanho fixo da imagem */
+}
+
+.contact-icon:hover {
+    transform: none; /* Remove qualquer transformação ao passar o mouse */
+}
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Muda para uma coluna em telas pequenas */
+        align-items: center; /* Garante que os itens fiquem centralizados */
+    }
+
+    .contact-bttn, .contact-btn {
+        margin: 10px 0; /* Ajusta o espaçamento entre os botões */
+    }
+    .contact-bttn:hover .contact-icon {
+        transform: none !important;
+    }
+
+    .contact-icon {
+        transition: none !important; /* Remove qualquer transição */
+        transform: none !important; /* Evita transformações */
+    }
+
+    footer p {
+        font-size: 14px; /* Diminui a fonte para telas pequenas */
+    }
+}
+
+/* Sidebar normal para telas grandes */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: width 0.3s ease; /* Transição suave para a largura */
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: background 0.3s;
+    gap: 10px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #6e026e; /* Escolha a cor desejada */
+}
+
+.sidebar-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Ajuste no conteúdo */
+.content {
+    margin-left: 200px; /* Espaço ao lado da sidebar */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+
+}
+
+/* O botão de menu está oculto por padrão */
+.menu-toggle {
+    display: none; /* Inicialmente invisível */
+    position: fixed; /* Fixa na lateral da tela */
+    top: 25px; /* Define a distância do topo */
+    right: 0; /* Alinha completamente à direita */
+    width: 25px; /* Largura fina para não cobrir conteúdo */
+    height: 80px; /* Torna o botão comprido verticalmente */
+    background: #2e012e; /* Cor de fundo */
+    color: white; /* Cor do ícone/texto */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Muda o cursor para indicar clique */
+    font-size: 20px; /* Tamanho da fonte/ícone */
+    z-index: 1100; /* Mantém acima dos outros elementos */
+    display: flex; /* Permite alinhar o conteúdo dentro do botão */
+    align-items: center; /* Centraliza o texto ou ícone no meio */
+    justify-content: center; /* Alinha horizontalmente */
+    writing-mode: vertical-rl; /* Rotaciona o texto para vertical */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 5px; /* Bordas levemente arredondadas */
+}
+
+/* Media Query para telas menores que 768px */
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: block; /* Exibe o botão de menu no mobile */
+    }
+
+    .sidebar {
+        width: 200px;
+        left: -200px; /* Esconde a sidebar */
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.open {
+        left: 0; /* Mostra a sidebar */
+    }
+
+    .content {
+        margin-left: 0; /* O conteúdo ocupa toda a tela */
+    }
+
+    /* Organiza os itens da lista em colunas para telas pequenas */
+    .sidebar ul li {
+        flex-direction: column; /* Organiza os itens verticalmente */
+        align-items: flex-start; /* Alinha à esquerda */
+        margin: 10px 0;
+    }
+}
+
+/* Ajusta o tamanho da fonte e espaçamento do conteúdo para telas pequenas */
+.content {
+    font-size: 14px; /* Reduz o tamanho da fonte */
+    padding: 15px;  /* Ajusta o espaçamento */
+}
+
+
+    /* Organiza os itens da lista em colunas para telas pequenas */
+    .sidebar ul li {
+        flex-direction: column; /* Organiza os itens verticalmente */
+        align-items: flex-start; /* Alinha à esquerda */
+        margin: 10px 0;
+    }
+
+
+    /* Ajusta o tamanho da fonte e espaçamento do conteúdo para telas pequenas */
+    .content {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        padding: 15px;  /* Ajusta o espaçamento */
+    }
+
+
+#contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.contact-btn, .contact-bttn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid #333;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.contact-btn:hover, .contact-bttn:hover {
+    transform: scale(1.1);
+    background-color: #ddd;
+}
+
+.contact-icon {
+    width: 70%;
+    height: auto;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+#formacao {
+    color: rgb(252, 250, 250);
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza o conteúdo na tela */
+}
+
+
+.formacao-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os itens */
+}
+
+
+.formacao-item {
+    display: flex;
+    align-items: center;
+    background: #B2A6FE; 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+    gap: 15px;
+    margin-bottom: 20px; /* Espaçamento entre os blocos */
+    font-size: 18px;
+    box-shadow: 0 6px 8px rgba(87, 86, 86, 0.986); /* Sombra suave */
+}
+
+#formacao div p {
+    color: rgb(12, 12, 12);  /* Garante que o texto dentro dos cards seja branco */
+}
+
+.grifo {
+    color: black;  /* Torna a palavra Formação preta */
+}
+
+.formacao-item img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    background: white;
+    padding: 5px;
+}
+
+.formacao-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.grifo {
+    padding-bottom: 5px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .formacao-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formacao-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .formacao-item img {
+        max-width: 80px;
+    }
+}
+
+/* Estilos para os itens dos projetos */
+.experiencia-item, .projeto3, .projeto2, .projeto1 {
+    display: flex; /* Flexbox para organizar os itens */
+    flex-direction: column; /* Organiza o conteúdo de forma vertical (imagem abaixo do texto) */
+    align-items: center; /* Centraliza os itens dentro do container */
+    margin-bottom: 20px; /* Espaço entre os projetos */
+    gap: 10px; /* Espaço entre o texto e a imagem */
+}
+
+.projeto-info {
+    background-color: transparent; /* Fundo branco com transparência */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    margin-top: 25px; /* Espaço entre os blocos */
+    backdrop-filter: blur(5px); /* Efeito de desfoque */
+    box-shadow: 0px 4px 6px rgba(221, 211, 211, 0.336); /* Sombra para destaque */
+    text-align: justify; /* Alinhamento do texto agora justificado */
+    display: flex;
+    font-size: 18px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Garante que o conteúdo será centralizado tanto vertical quanto horizontalmente */
+    color: black; /* Cor do texto definida para preto */
+}
+
+.projeto-info img {
+    width: 250px; /* Tamanho fixo para as imagens */
+    height: 150px; /* Altura fixa para manter proporção */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem deformar */
+    border-radius: 10px; /* Borda arredondada para as imagens */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+    box-shadow: 0 6px 8px rgba(87, 86, 86, 0.986); /* Sombra suave */
+}
+
+.projeto-info div {
+    text-align: center; /* Centraliza o texto dentro do div */
+}
+
+.projeto-info p {
+    margin: 5px 0; /* Espaçamento entre os parágrafos */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor leitura */
+    text-align: justify; /* Justifica o texto */
+}
+
+.copyright {
+    margin-left: 40px; /* Ajuste o valor conforme necessário */
+  }
+
+  /* Estilo para o menu */
+.sidebar {
+    display: block; /* Menú sempre visível em telas grandes */
+}
+
+/* A partir de um tamanho de tela pequeno, o menu deve ser escondido */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* O menu está escondido por padrão em telas pequenas */
+    }
+
+    .sidebar.open {
+        display: block; /* O menu se torna visível quando a classe 'open' é aplicada */
+    }
+}
+
+/* Estilo para o toggle button */
+.toggle-button {
+    display: none; /* Escondido em telas grandes */
+}
+
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block; /* Botão de menu visível em telas pequenas */
+    }
+}
+
+/* Estiliza a opção principal "Idioma" */
+.idioma {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Submenu oculto por padrão */
+.submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: #222;
+    width: 150px;
+}
+
+/* Exibe o submenu quando o mouse passar sobre "Idioma" */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Estiliza os itens do submenu */
+.submenu li {
+    display: block;
+}
+
+/* Estiliza os links dentro do submenu */
+.submenu li a {
+    display: block;
+    padding: 8px 10px;  /* Menor espaço interno */
+    color: white;
+    text-decoration: none;
+    font-size: 12px;  /* Tamanho de fonte menor */
+    margin-left: 35px;  /* Margem à esquerda */
+}
+
+/* Cor diferente no hover */
+.submenu .portugues:hover {
+    background-color: #679b52; /* Verde */
+}
+
+.submenu .ingles:hover {
+    background-color: #5891ce; /* Azul */
+}

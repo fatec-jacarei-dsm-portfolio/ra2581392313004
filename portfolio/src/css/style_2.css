@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url("../assets/img/tempo.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+header {
+    background-color: #489899; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 20px 30px; /* Aumentando o padding para dar mais espaço */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-align: center; /* Centralizando o texto */
+}
+
+header h1 {
+    font-family: 'Arial', sans-serif; /* Fonte estilosa */
+    font-size: 36px; /* Tamanho grande do texto */
+    font-weight: bold; /* Negrito para dar destaque */
+    text-transform: uppercase; /* Transformando em maiúsculas */
+    margin: 0; /* Removendo margem para um layout mais limpo */
+    animation: slideIn 1s ease-out; /* Animação de entrada */
+}
+
+/* Animação para o texto */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.experiencia-profissional {
+    display: flex;
+    flex-direction: column; /* Coloca os cards em uma coluna em todas as telas */
+    align-items: center; /* Centraliza os cards horizontalmente */
+    padding: 20px;
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+.card {
+    background-color: rgba(245, 245, 245, 0.9);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Tamanho do card padrão */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    transition: width 0.3s ease; /* Transição suave para o redimensionamento */
+}
+
+.card .empresa {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.card strong {
+    font-weight: bold;
+    color: #000;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    padding-bottom: 5px; /* Ajuste conforme necessário */
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer button:hover {
+    background-color: #280441;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* Reduz o tamanho dos cards para 90% da largura disponível */
+        padding: 20px; /* Ajusta o padding para melhor aparência */
+    }
+}
+
+.copyright {
+    color: #000;
+}
+
