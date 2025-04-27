@@ -1,2 +1,4 @@
-# ra2581392313004
-Repositório do aluno JULIANA MACIEL MANSO.
+# Portfólio de Projetos - Fatec Jacareí
+### Aluno: Juliana Maciel Manso
+### Curso: Desenvolvimento de Software Multiplataforma
+### Turma: 1o. Semestre de 2023
