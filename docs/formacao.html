@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formação</title>
+  <link rel="stylesheet" href="./src/css/style_3.css" />
+  <style>
+    .card img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Formação</h1>
+  </header>
+
+  <footer>
+    <a href="./index.html" style="text-decoration: none;">
+      <button><strong>Voltar</strong></button>
+    </a>
+  </footer>
+
+  <div class="experiencia-profissional">
+
+    <div class="card">
+      <img src="./src/assets/img/fatec.png" alt="FATEC" />
+      <div class="empresa">
+        <p><strong>Desenvolvimento de Software Multiplataforma</strong></p>
+        <p>FATEC - Faculdade de Tecnologia do Estado de São Paulo (Jacareí-SP)</p>
+        <p>Curso presencial - Conclusão prevista para dezembro de 2025</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./src/assets/img/fgv.png" alt="FGV" />
+      <div class="empresa">
+        <p><strong>MBA em Finanças Corporativas</strong></p>
+        <p>FGV - Fundação Getúlio Vargas (Belo Horizonte-MG)</p>
+        <p>Curso presencial - Concluído em outubro de 2019</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./src/assets/img/fatesf.png" alt="FATESF" />
+      <div class="empresa">
+        <p><strong>Bacharel em Administração</strong></p>
+        <p>FATESF - Faculdade de Tecnologia São Francisco (Jacareí-SP)</p>
+        <p>Curso presencial - Concluído em dezembro de 2014</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./src/assets/img/incenna.png" alt="INCENNA" />
+      <div class="empresa">
+        <p><strong>Técnico em Artes Dramáticas</strong></p>
+        <p>(Empresa da área de Saúde, Ortopedia e Fisioterapia)</p>
+        <p><strong>Analista Financeira (Autônoma)</strong> – 09/2020 a 03/2021</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./src/assets/img/cephas.png" alt="CEPHAS" />
+      <div class="empresa">
+        <p><strong>Técnico em Eletrônica</strong></p>
+        <p>CEPHAS - Colégio de Educação Profissional Hélio Augusto de Souza (São José dos Campos-SP)</p>
+        <p>Curso presencial - Concluído em junho de 2008</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./src/assets/img/Senai.png" alt="SENAI" />
+      <div class="empresa">
+        <p><strong>Aprendizagem Industrial em Mecânica de Usinagem</strong></p>
+        <p>SENAI "Luiz Simon" (Jacareí-SP)</p>
+        <p>Curso presencial - Concluído em junho de 2005</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p class="copyright">
+      &copy; <span id="2025"></span> Juliana M. Manso. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('2025').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
